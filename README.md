@@ -1,6 +1,5 @@
 # NQUMailroom
 
-> manager stu package <br>
 [Demo網址](https://mailroom-ba90c.firebaseapp.com/)<br>
 [PPT放置處(google雲端)](https://drive.google.com/open?id=1Rvk9dgfos2f8PxhMfsVZ6TpR5nDeFCbC)
 -------------
