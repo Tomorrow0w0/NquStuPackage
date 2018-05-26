@@ -60,6 +60,11 @@
             <label>狀態 :</label>
           </div>
         </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input disabled type="text" v-model="sms_info">
+          </div>
+        </div>
         <button type="submit" class="btn">提交</button>
         <router-link to="/" class="btn grey">取消</router-link>
       </form>
@@ -85,7 +90,8 @@
         "pg_No": null,
         "phone": null,
         "cntr_No": null,
-        "info": null
+        "info": null,
+        "sms_info": "SMS未發送"
       }
     },
     mounted(){
@@ -125,7 +131,8 @@
           "pg_No": this.pg_No,
           "phone": this.phone,
           "cntr_No": this.cntr_No,
-          "info": this.info
+          "info": this.info,
+          "sms_info": this.sms_info
         })
           .then(docRef => this.$router.push("/"))
           .catch(error => console.log(error))

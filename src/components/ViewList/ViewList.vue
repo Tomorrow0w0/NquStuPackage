@@ -22,6 +22,9 @@
       <li class="collection-item">
         狀態: {{ info }}
       </li>
+      <li class="collection-item">
+        簡訊狀態: {{ sms_info }}
+      </li>
     </ul>
     <router-link to="/" class="btn grey">返回</router-link>
     <button @click="deleteStu" class="btn red">刪除</button>
@@ -48,7 +51,8 @@
         "pg_No": null,
         "phone": null,
         "cntr_No": null,
-        "info": null
+        "info": null,
+        "sms_info": null
       }
     },
     beforeRouteEnter(to, from, next){
@@ -62,7 +66,8 @@
               vm.pg_No = doc.data().pg_No,
               vm.phone = doc.data().phone,
               vm.cntr_No = doc.data().cntr_No,
-              vm.info = doc.data().info
+              vm.info = doc.data().info,
+              vm.sms_info = doc.data().sms_info
             })
           })
         })
@@ -81,7 +86,8 @@
               this.pg_No = doc.data().pg_No,
               this.phone = doc.data().phone,
               this.cntr_No = doc.data().cntr_No,
-              this.info = doc.data().info
+              this.info = doc.data().info,
+              this.sms_info = doc.data().sms_info
             })
           })
       },
